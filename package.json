@@ -14,13 +14,16 @@
     "@chainsafe/libp2p-noise": "^7.0.1",
     "@libp2p/mplex": "^1.2.1",
     "@libp2p/peer-id": "^1.1.13",
-    "cf-libp2p-ws-transport": "github:alanshaw/cf-libp2p-ws-transport",
+    "cf-libp2p-ws-transport": "^1.0.1",
     "libp2p": "^0.37.3",
+    "miniswap": "^1.0.0",
     "multiformats": "^9.7.0",
     "uint8arrays": "^3.0.0"
   },
   "devDependencies": {
     "@libp2p/websockets": "^3.0.0",
-    "esbuild": "^0.14.48"
+    "blockstore-core": "^1.0.5",
+    "esbuild": "^0.14.48",
+    "ipfs-bitswap": "^11.0.4"
   }
 }

@@ -14,5 +14,9 @@ IPFS Bitswap peer in Cloudflare workers.
     $ wrangler secret put PEER_PRIVATE_KEY --env DEVELOPER
     # Listening multiaddr (without peer ID)
     $ wrangler secret put LISTEN_ADDR --env DEVELOPER
+    # Encoded basic auth key for the Minibus service
+    $ wrangler secret put MINIBUS_BASIC_AUTH --env DEVELOPER
+    # (OPTIONAL) Minibus service URL
+    $ wrangler secret put MINIBUS_API_URL --env DEVELOPER
     ```
 4. Publish `wrangler publish --env DEVELOPER`

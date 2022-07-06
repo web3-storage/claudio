@@ -4,8 +4,16 @@ import { Mplex } from '@libp2p/mplex'
 import { createPeerId } from '@libp2p/peer-id'
 import * as Digest from 'multiformats/hashes/digest'
 import { fromString } from 'uint8arrays/from-string'
+import { Miniswap, BITSWAP_PROTOCOL } from 'miniswap'
+import { Minibus } from './minibus.js'
+// import { enable } from '@libp2p/logger'
+// enable('libp2p*')
 
 export default {
+  /**
+   * @param {Request} request
+   * @param {Record<string, string>} env
+   */
   async fetch (request, env) {
     const { Noise } = await import('@chainsafe/libp2p-noise')
     const peerId = createPeerId({
@@ -23,6 +31,14 @@ export default {
       streamMuxers: [new Mplex()],
       connectionEncryption: [new Noise()]
     })
+
+    const minibus = new Minibus({
+      endpoint: env.MINIBUS_API_URL,
+      headers: { Authorization: `Basic ${env.MINIBUS_BASIC_AUTH}` }
+    })
+    const miniswap = new Miniswap(minibus)
+
+    node.handle(BITSWAP_PROTOCOL, miniswap.handler)
 
     await node.start()
 
