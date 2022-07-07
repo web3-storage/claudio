@@ -5,7 +5,7 @@ import { createPeerId } from '@libp2p/peer-id'
 import * as Digest from 'multiformats/hashes/digest'
 import { fromString } from 'uint8arrays/from-string'
 import { Miniswap, BITSWAP_PROTOCOL } from 'miniswap'
-import { Minibus } from './minibus.js'
+import { Minibus } from '@web3-storage/minibus'
 // import { enable } from '@libp2p/logger'
 // enable('libp2p*')
 

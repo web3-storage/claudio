@@ -14,6 +14,7 @@
     "@chainsafe/libp2p-noise": "^7.0.1",
     "@libp2p/mplex": "^1.2.1",
     "@libp2p/peer-id": "^1.1.13",
+    "@web3-storage/minibus": "^1.0.0",
     "cf-libp2p-ws-transport": "^1.0.1",
     "libp2p": "^0.37.3",
     "miniswap": "^1.0.0",
