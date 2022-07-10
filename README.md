@@ -1,8 +1,13 @@
-# cf-bitswap-peer
+# claudio
 
-IPFS Bitswap peer in Cloudflare workers.
+> IPFS Bitswap peer in Cloudflare workers.
 
-## Usage
+## Local setup
+
+1. Copy `.env.tpl` file into `.env` and fill in environment variables
+2. Run `npm run dev` to start worker within Miniflare
+
+## Clouflare setup
 
 1. Add your env section to `wrangler.toml`
 2. Dev `wrangler dev --env DEVELOPER`
