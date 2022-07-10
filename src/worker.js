@@ -34,7 +34,9 @@ export default {
 
     const minibus = new Minibus({
       endpoint: env.MINIBUS_API_URL,
-      headers: { Authorization: `Basic ${env.MINIBUS_BASIC_AUTH}` }
+      headers: { Authorization: `Basic ${env.MINIBUS_BASIC_AUTH}` },
+      // @ts-ignore needs fetch from worker scope. globalThis fetch errors with TypeError: Illegal invocation
+      fetch: (...args) => fetch(...args)
     })
     const miniswap = new Miniswap(minibus)
 
