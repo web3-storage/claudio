@@ -1,0 +1,8 @@
+export const globals = {
+  PEER_ID: '12D3KooWDNAwA1VnXKva83fLa8RyBscuUvpm11yL3gVrp2DFcTLm',
+  PEER_PRIVATE_KEY: 'CAESQCX05a0fKYJxFNFUeGCP8w4P4wDaVItww9We00weI9nFNLjxq8NIeQ9TNmpBR9O4usB9Y0C4BkzDN8DTi6VcoLo=',
+  LISTEN_ADDR: '/dns4/localhost/tcp/8787/ws',
+  // TODO Smoke
+  MINIBUS_API_URL: '',
+  MINIBUS_BASIC_AUTH: ''
+}

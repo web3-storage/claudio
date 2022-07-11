@@ -5,6 +5,7 @@ import { Mplex } from '@libp2p/mplex'
 import { createBitswap } from 'ipfs-bitswap'
 import { MemoryBlockstore } from 'blockstore-core/memory'
 import { CID } from 'multiformats'
+import { multiaddr } from '@multiformats/multiaddr'
 import { toString } from 'uint8arrays'
 
 async function main () {
@@ -20,10 +21,10 @@ async function main () {
 
   await node.start()
 
-  const dialAddr = '/dns4/cf-bitswap-peer-alanshaw.alanshaw-pl.workers.dev/tcp/80/ws/p2p/12D3KooWPXCexBU8e8BDUspmR4PVAAz4rgLckgSDhUPS5pJvVdpu'
-  // const dialAddr = '/dns4/localhost/tcp/8787/ws/p2p/12D3KooWPXCexBU8e8BDUspmR4PVAAz4rgLckgSDhUPS5pJvVdpu'
+  const dialAddr = '/dns4/claudio-staging.protocol-labs.workers.dev/tcp/80/ws/p2p/12D3KooWC7SsELnRThNK7RqZCdHTuhRQAWho14Z8w4MjpypsZWrQ'
+  // const dialAddr = '/dns4/localhost/tcp/8787/ws/p2p/12D3KooWC7SsELnRThNK7RqZCdHTuhRQAWho14Z8w4MjpypsZWrQ'
   console.log('dialing', dialAddr)
-  await node.dial(dialAddr)
+  await node.dial(multiaddr(dialAddr))
 
   const cid = CID.parse('zQmNPGiNvMGctTrohEHF9ewVkbtiptpmgMSSV3c3bmJS9TL')
   console.log('bitswapping', cid.toString())
