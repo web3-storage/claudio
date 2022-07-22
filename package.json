@@ -1,6 +1,6 @@
 {
   "name": "cf-bitswap-peer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "IPFS Bitswap peer in Cloudflare workers.",
   "main": "src/worker.js",
   "type": "module",
