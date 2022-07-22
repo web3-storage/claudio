@@ -22,7 +22,7 @@
     "@web3-storage/minibus": "^1.0.0",
     "cf-libp2p-ws-transport": "^1.0.1",
     "libp2p": "^0.37.3",
-    "miniswap": "^1.0.0",
+    "miniswap": "^1.1.1",
     "multiformats": "^9.7.0",
     "uint8arrays": "^3.0.0"
   },
